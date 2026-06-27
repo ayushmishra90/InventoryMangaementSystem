@@ -1,9 +1,5 @@
-from sqlalchemy import String
-from sqlalchemy import Integer
-from sqlalchemy import Float
-
-from sqlalchemy.orm import Mapped
-from sqlalchemy.orm import mapped_column
+from sqlalchemy import String, Float, Integer
+from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database.base import Base
 
