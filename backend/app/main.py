@@ -45,7 +45,7 @@ app.add_middleware(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://inventorymangaementsystem.onrender.com",
+        "https://inventory-mangaement-system.vercel.app",
         "http://localhost:3000",
     ],
     allow_credentials=True,
