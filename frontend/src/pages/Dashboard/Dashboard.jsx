@@ -38,10 +38,6 @@ function Dashboard() {
 
             const response = await getDashboard();
 
-            console.log("Axios Response:", response);
-            console.log("Response Data:", response.data);
-            console.log("Dashboard Data:", response.data.data);
-
             setDashboard(
                 response.data.data
             );
@@ -61,7 +57,6 @@ function Dashboard() {
         }
 
     };
-    console.log("Dashboard state:", dashboard);
     return (
 
         <>

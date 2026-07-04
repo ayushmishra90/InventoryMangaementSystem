@@ -1,8 +1,11 @@
-version: '3.9'
+version: "3.9"
 
 services:
+
   postgres:
+
     image: postgres:16-alpine
+
     container_name: inventory_postgres
 
     environment:
@@ -15,6 +18,44 @@ services:
 
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+
+    build: ./backend
+
+    container_name: inventory_backend
+
+    ports:
+      - "8000:8000"
+
+    env_file:
+      - ./backend/.env
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+    restart: unless-stopped
+
+  frontend:
+
+    build: ./frontend
+
+    container_name: inventory_frontend
+
+    ports:
+      - "3000:80"
+
+    depends_on:
+      - backend
+
+    restart: unless-stopped
 
 volumes:
   postgres_data:
