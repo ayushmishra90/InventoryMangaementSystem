@@ -2,7 +2,7 @@ from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database.base import Base
-
+from sqlalchemy.orm import relationship
 
 class Customer(Base):
 
@@ -27,4 +27,9 @@ class Customer(Base):
     phone_number: Mapped[str] = mapped_column(
         String(20),
         nullable=False
+    )
+
+    orders = relationship(
+        "Order",
+        back_populates="customer"
     )

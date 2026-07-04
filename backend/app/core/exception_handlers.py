@@ -32,7 +32,7 @@ async def app_exception_handler(
     )
 
     return JSONResponse(
-        status_code=200,
+        status_code=400,
         content=failure_response(
             exc.code,
             exc.message
@@ -45,7 +45,7 @@ async def validation_exception_handler(
 ):
 
     return JSONResponse(
-        status_code=200,
+        status_code=422,
         content=failure_response(
             ResponseCode.VALIDATION_ERROR,
             str(exc.errors())

@@ -1,0 +1,50 @@
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+    gap:20px;
+
+}
+
+.page-subtitle{
+
+    margin-top:6px;
+
+    color:#6b7280;
+
+}
+
+.add-product-btn{
+
+    transition:.2s;
+
+}
+
+.add-product-btn svg{
+
+    flex-shrink:0;
+
+}
+@media(max-width:900px){
+
+    .add-product-btn{
+
+        min-width:46px;
+
+        padding:10px;
+
+    }
+
+    .add-product-btn .btn-text{
+
+        display:none;
+
+    }
+
+}

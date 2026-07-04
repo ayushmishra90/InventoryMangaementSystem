@@ -1,0 +1,43 @@
+body{
+
+    margin:0;
+
+    background:var(--background);
+
+    font-family:
+
+        Inter,
+
+        Arial,
+
+        sans-serif;
+
+    color:var(--text);
+
+}
+
+.page{
+
+    padding:30px;
+
+}
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.page-subtitle{
+
+    color:#6b7280;
+
+    margin-top:4px;
+
+}

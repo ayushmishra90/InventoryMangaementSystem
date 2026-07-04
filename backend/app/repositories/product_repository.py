@@ -69,3 +69,10 @@ class ProductRepository:
         db.delete(product)
 
         db.commit()
+
+    @staticmethod
+    def save(
+        db: Session,
+        product
+    ):
+        db.add(product)

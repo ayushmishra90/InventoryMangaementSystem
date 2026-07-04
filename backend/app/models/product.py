@@ -2,7 +2,7 @@ from sqlalchemy import String, Float, Integer
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database.base import Base
-
+from sqlalchemy.orm import relationship
 
 class Product(Base):
     __tablename__ = "products"
@@ -31,4 +31,9 @@ class Product(Base):
     stock_quantity: Mapped[int] = mapped_column(
         Integer,
         nullable=False
+    )
+
+    order_items = relationship(
+        "OrderItem",
+        back_populates="product"
     )

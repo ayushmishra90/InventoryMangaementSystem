@@ -1,0 +1,68 @@
+
+.customer-select{
+
+    width:100%;
+
+    max-width:420px;
+
+    padding:10px 14px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:8px;
+
+    margin:15px 0 25px;
+
+    font-size:15px;
+
+}
+
+.customer-card{
+
+    min-width:0;
+
+}
+
+.customer-card .card-actions .btn{
+
+    flex:1;
+
+}
+
+@media(max-width:900px){
+
+    .customer-card .card-actions .btn{
+
+        min-width:42px;
+
+        padding:10px;
+
+    }
+
+    .customer-card .card-actions .btn-text{
+
+        display:none;
+
+    }
+
+}
+
+.customer-card .card-title{
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+.customer-card .card-row span:last-child{
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+}

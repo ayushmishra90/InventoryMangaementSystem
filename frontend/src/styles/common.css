@@ -1,0 +1,44 @@
+:root{
+
+    --primary:#2563eb;
+    --primary-hover:#1d4ed8;
+
+    --success:#16a34a;
+    --danger:#dc2626;
+    --warning:#d97706;
+
+    --background:#f5f7fb;
+
+    --card:#ffffff;
+
+    --text:#1f2937;
+
+    --border:#e5e7eb;
+
+    --radius:12px;
+
+    --shadow:
+        0 4px 14px rgba(0,0,0,.08);
+
+    --transition:.25s;
+
+}
+
+h1{
+    font-size:32px;
+    font-weight:700;
+    color:#1f2937;
+    margin:0;
+}
+
+h2{
+    font-size:22px;
+    font-weight:600;
+    color:#1f2937;
+}
+
+h3{
+    font-size:18px;
+    font-weight:600;
+    color:#1f2937;
+}
